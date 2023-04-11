@@ -1,11 +1,9 @@
 ZADANIE 2: selektory
-1.Scouts Panel
-//*[text()="Scouts Panel"]
+
 1.Scouts Panel
 
-/html/body/div/form/div/div[1]/h5 
-
-h5.MuiTypography-root
+/html/body/div/form/div/div[1]/h5 \
+h5.MuiTypography-root\
 //*[text()="Scouts Panel"]
 
 2.Login
