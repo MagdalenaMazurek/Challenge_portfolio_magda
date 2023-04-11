@@ -13,5 +13,5 @@ class AddMatch(BasePage):
     Match_out_home = "//*[text()='Match out home']"
     Time_played = "//*[text()='Time played']"
     General = "//*[text()='General']"
-    
+
 pass
