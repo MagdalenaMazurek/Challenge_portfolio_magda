@@ -9,7 +9,7 @@ h5.MuiTypography-root\
 2.Login
 
 //label[@id="password-label"] \
-//label[@for="login"]
+//label[@for="login"]\
 #login-label 
 
 3.Miejsce do wpisania loginu
