@@ -1,8 +1,6 @@
 import os
 import time
 import unittest
-
-import pyautogui
 from selenium import webdriver
 
 from pages.dashboard import Dashboard
@@ -13,7 +11,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 
 
-class TestAddaPlayer(unittest.TestCase):
+class przypadek_testowy_2(unittest.TestCase):
 
     @classmethod
     def setUp(self):
@@ -23,7 +21,7 @@ class TestAddaPlayer(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_add_a_Player(self):
+    def test_sign_out(self):
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
         user_login.type_in_email('user07@getnada.com')
@@ -31,16 +29,8 @@ class TestAddaPlayer(unittest.TestCase):
         user_login.click_sing_in_button()
         time.sleep(5)
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.click_add_player_button()
+        dashboard_page.click_Sign_out()
         time.sleep(5)
-        add_player = AddAPlayer(self.driver)
-        add_player.title_of_page()
-        add_player.type_in_email('mazurek@gmail.com')
-        add_player.district_listbox('Opole')
-        add_player.click_clear_button()
-        var_shot = pyautogui.screenshot()
-        var_shot.save("Y:/PYCharm/PYCharm.png")
-
 
     @classmethod
     def tearDown(self):

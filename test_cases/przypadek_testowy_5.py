@@ -1,6 +1,8 @@
 import os
 import time
 import unittest
+
+import pyautogui
 from selenium import webdriver
 
 from pages.dashboard import Dashboard
@@ -11,7 +13,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 
 
-class TestAddaPlayer(unittest.TestCase):
+class przypadek_testowy_5(unittest.TestCase):
 
     @classmethod
     def setUp(self):
@@ -34,11 +36,10 @@ class TestAddaPlayer(unittest.TestCase):
         add_player = AddAPlayer(self.driver)
         add_player.title_of_page()
         add_player.type_in_email('mazurek@gmail.com')
-        add_player.type_in_name('Magda')
-        add_player.type_in_surname('Mazurek')
-        add_player.type_in_age('33')
-        add_player.type_in_main_position('goalkeeper')
-        add_player.click_submit_button()
+        add_player.district_listbox('Opole')
+        add_player.click_clear_button()
+        var_shot = pyautogui.screenshot()
+        var_shot.save("Y:/PYCharm/PYCharm.png")
 
 
     @classmethod

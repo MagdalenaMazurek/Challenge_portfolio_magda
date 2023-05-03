@@ -11,7 +11,7 @@ from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 
 
-class TestAddaPlayer(unittest.TestCase):
+class przypadek_testowy_3(unittest.TestCase):
 
     @classmethod
     def setUp(self):
@@ -34,8 +34,8 @@ class TestAddaPlayer(unittest.TestCase):
         add_player = AddAPlayer(self.driver)
         add_player.title_of_page()
         add_player.type_in_email('mazurek@gmail.com')
-        add_player.type_in_club_field('Barcelona')
-        add_player.type_in_level_field('1')
+        add_player.district_listbox('Opole')
+        add_player.leg_listbox('Left_leg')
         add_player.click_submit_button()
 
 
